@@ -1,0 +1,28 @@
+<!-- store/templates/base.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Lacteos Gaviota S.A.S{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Lacteos Gaviota</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'catalogo' %}">Catálogo</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Aquí se incluirá el contenido específico de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lacteos Gaviota</p>
+    </footer>
+</body>
+</html>

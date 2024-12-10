@@ -1,0 +1,21 @@
+{% extends 'tienda/base.html' %}
+
+{% block content %}
+  <h1>Catálogo de Productos</h1>
+
+  <div class="productos">
+    {% for producto in productos %}
+      <div class="producto">
+        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+        <h3>{{ producto.nombre }}</h3>
+        <p>{{ producto.descripcion }}</p>
+        <p>${{ producto.precio }}</p>
+        <a href="#">Agregar al carrito</a>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Enlace para volver al inicio -->
+  <p><a href="{% url 'inicio' %}">Volver al inicio</a></p>
+
+{% endblock %}
