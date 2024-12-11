@@ -1,4 +1,4 @@
-{% extends 'tienda/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
@@ -15,7 +15,7 @@
         <h3>{{ producto.nombre }}</h3>
         <p>{{ producto.descripcion }}</p>
         <p>${{ producto.precio }}</p>
-        <a href="#">Agregar al carrito</a>
+        <!-- <a href="#">Agregar al carrito</a> -->
       </div>
     {% endfor %}
   </div>

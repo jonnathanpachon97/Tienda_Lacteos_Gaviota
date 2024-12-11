@@ -5,7 +5,7 @@ from .models import Producto
 # Create your views here.
 
 def inicio(request):
-    return render(request, 'tienda/base.html')
+    return render(request, 'base.html')
 
 
 def catalogo(request):
