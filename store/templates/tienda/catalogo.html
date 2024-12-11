@@ -1,4 +1,5 @@
 {% extends 'tienda/base.html' %}
+{% load static %}
 
 {% block content %}
   <h1>Catálogo de Productos</h1>
@@ -6,7 +7,11 @@
   <div class="productos">
     {% for producto in productos %}
       <div class="producto">
+        {% if producto.imagen %}
         <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+        {% else %}
+        <img src="{% static 'images/default.jpg' %}" alt="Imagen por defecto">
+        {% endif %}
         <h3>{{ producto.nombre }}</h3>
         <p>{{ producto.descripcion }}</p>
         <p>${{ producto.precio }}</p>
