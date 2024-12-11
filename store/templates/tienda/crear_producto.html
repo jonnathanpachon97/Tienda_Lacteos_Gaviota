@@ -1,0 +1,17 @@
+<!-- store/templates/store/crear_producto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Producto</title>
+</head>
+<body>
+    <h1>Crear Nuevo Producto</h1>
+    
+    <form method="POST" enctype="multipart/form-data"> <!-- enctype necesario para enviar archivos -->
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Muestra el formulario con etiquetas <p> alrededor de cada campo -->
+        <button type="submit">Crear Producto</button>
+    </form>
+</body>
+</html>
